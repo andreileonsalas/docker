@@ -15,7 +15,7 @@ RUN apt-get update \
     ca-certificates \
     gcc \
     wget \
-  && wget https://archive.debian.org/debian/pool/main/p/python2.7/python2.7_2.7.18-5_amd64.deb -O python2.7.deb \
+  && wget https://debian.sipwise.com/debian/pool/main/p/python2.7/python2.7_2.7.18-5_amd64.deb -O python2.7.deb \
   && dpkg -i python2.7.deb \
   && apt-get install -f \
   && apt-get install -y python-pip python-dev \
