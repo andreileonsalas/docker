@@ -7,10 +7,8 @@ get_ip() {
 
 cd $DNDTOOLS_DIR/dndtools
 
-if [ ! -f "dndproject/local.py" ]
-then
-  ln -s $DATA_DIR/local.py dndproject/local.py
-fi
+
+ln -s $DATA_DIR/local.py dndproject/local.py
 
 echo updating database...
 python manage.py syncdb --all
