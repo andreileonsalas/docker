@@ -15,14 +15,11 @@ RUN apt-get update \
     ca-certificates \
     gcc \
     wget \
-    libpython2.7-stdlib \
-    python2.7-minimal \
-    mime-support \
   && wget https://debian.sipwise.com/debian/pool/main/p/python2.7/python2.7_2.7.18-5_amd64.deb -O python2.7.deb \
   && dpkg -i python2.7.deb \
-  && apt-get install -f \
-  && apt-get install -y python-pip python-dev \
+  && apt-get install -f -y \
   && rm python2.7.deb \
+  && apt-get install -y python-pip python-dev \
   && wget https://github.com/dndtools/dndtools/archive/$DNDTOOLS_VERSION.tar.gz -q -O- | tar -xz \
   && mv /dndtools-$DNDTOOLS_VERSION $DNDTOOLS_DIR \
   && cd $DNDTOOLS_DIR \
