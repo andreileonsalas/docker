@@ -18,5 +18,6 @@ echo
 echo Starting dndtools on http://$(get_ip):8000
 echo 
 echo ========================================================
-echo python manage.py runserver $(get_ip):8000
+echo 
 python manage.py help
+python manage.py runserver $(get_ip):8000
