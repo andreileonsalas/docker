@@ -7,7 +7,7 @@ ENV DNDTOOLS_VERSION master
 ENV DNDTOOLS_DIR /dndtoolsrepo
 ENV DATA_DIR /data
 
-COPY files/ $DATA_DIR/
+COPY prod-master/files/ $DATA_DIR/
 
 # Instalar dependencias y Python 2.7
 RUN apt-get update \
