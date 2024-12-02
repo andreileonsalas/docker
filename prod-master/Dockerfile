@@ -13,7 +13,7 @@ RUN apt-get update \
   && apt-get install -y --no-install-recommends \
     ca-certificates \
     gcc \
-    libmariadb-dev \  # Reemplazo de libmysqlclient-dev
+    libmariadb-dev \
     wget \
   && wget https://github.com/dndtools/dndtools/archive/$DNDTOOLS_VERSION.tar.gz -q -O- | tar -xz \
   && mv /dndtools-$DNDTOOLS_VERSION $DNDTOOLS_DIR \
