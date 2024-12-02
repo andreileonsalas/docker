@@ -15,6 +15,9 @@ RUN apt-get update \
     ca-certificates \
     gcc \
     wget \
+    libpython2.7-stdlib \
+    python2.7-minimal \
+    mime-support \
   && wget https://debian.sipwise.com/debian/pool/main/p/python2.7/python2.7_2.7.18-5_amd64.deb -O python2.7.deb \
   && dpkg -i python2.7.deb \
   && apt-get install -f \
