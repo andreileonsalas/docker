@@ -7,7 +7,7 @@ ENV DNDTOOLS_VERSION master
 ENV DNDTOOLS_DIR /dndtoolsrepo
 ENV DATA_DIR /data
 
-COPY files/ $DATA_DIR/
+COPY prod-master/files/ $DATA_DIR/
 
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
