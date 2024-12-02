@@ -12,8 +12,6 @@ then
   ln -s $DATA_DIR/local.py dndproject/local.py
 fi
 
-echo updating database...
-python manage.py syncdb --all
 
 echo ========================================================
 echo 
