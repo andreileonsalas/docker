@@ -6,7 +6,7 @@ ENV DNDTOOLS_VERSION master
 ENV DNDTOOLS_DIR /dndtoolsrepo
 ENV DATA_DIR /data
 
-COPY prod-master/files/ $DATA_DIR/
+COPY prod-master-sql/files/ $DATA_DIR/
 
 # Instalar dependencias y DnDTools
 RUN apt-get update \
