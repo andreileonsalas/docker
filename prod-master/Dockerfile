@@ -13,14 +13,13 @@ RUN apt-get update \
   && apt-get install -y --no-install-recommends \
     ca-certificates \
     gcc \
-    libmysqlclient-dev \ # Agrega esta dependencia
+    libmysqlclient-dev \
     wget \
   && wget https://github.com/dndtools/dndtools/archive/$DNDTOOLS_VERSION.tar.gz -q -O- | tar -xz \
   && mv /dndtools-$DNDTOOLS_VERSION $DNDTOOLS_DIR \
   && cd $DNDTOOLS_DIR \
   && pip install https://github.com/etianen/django-reversion/archive/release-1.3.3.zip \
   && pip install -r requirements.txt \
-  && pip install mysqlclient \ # Instala mysqlclient
   && apt-get purge -y \
     ca-certificates \
     gcc \
