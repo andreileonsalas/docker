@@ -21,3 +21,4 @@ echo ========================================================
 echo 
 python manage.py help
 python manage.py runserver $(get_ip):8000
+echo server started at port 8000
