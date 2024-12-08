@@ -14,7 +14,7 @@ RUN apt-get update \
     ca-certificates \
     gcc \
     wget \
-  && wget https://github.com/dndtools/dndtools/archive/$DNDTOOLS_VERSION.tar.gz -q -O- | tar -xz \
+  && wget https://srd.dndtools.org/dndtools-master.zip -q -O dndtools-master.zip && unzip -o dndtools-master.zip
   && mv /dndtools-$DNDTOOLS_VERSION $DNDTOOLS_DIR \
   && cd $DNDTOOLS_DIR \
   && pip install https://github.com/etianen/django-reversion/archive/release-1.3.3.zip \
