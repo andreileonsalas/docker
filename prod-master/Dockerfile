@@ -15,7 +15,8 @@ RUN apt-get update \
     gcc \
     libmariadb-dev \
     wget \
-  && wget https://srd.dndtools.org/dndtools-master8.zip -q -O dndtools-master.zip && unzip -o dndtools-master.zip \
+  ## && wget https://srd.dndtools.org/dndtools-master6.zip -q -O dndtools-master.zip && unzip -o dndtools-master.zip \
+  && wget https://github.com/dndtools/dndtools/archive/$DNDTOOLS_VERSION.tar.gz -q -O- | tar -xz \
   && mv /dndtools-$DNDTOOLS_VERSION $DNDTOOLS_DIR \
   && cd $DNDTOOLS_DIR \
   && pip install https://github.com/etianen/django-reversion/archive/release-1.3.3.zip \
