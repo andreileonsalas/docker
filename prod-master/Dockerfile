@@ -15,8 +15,9 @@ RUN apt-get update \
     gcc \
     libmariadb-dev \
     wget \
-  ## && wget https://srd.dndtools.org/dndtools.zip -q -O dndtools-master.zip && unzip -o dndtools-master.zip \
-  && unzip -o /$DNDTOOLS_DIR/dndtools.zip \
+  && wget https://srd.dndtools.org/dndtools.zip -q -O dndtools-master.zip && unzip -o dndtools-master.zip \
+  && ls \
+  ## && unzip -o /dndtools.zip \
   ## && wget https://github.com/dndtools/dndtools/archive/$DNDTOOLS_VERSION.tar.gz -q -O- | tar -xz \
   && mv /dndtools $DNDTOOLS_DIR \
   ## && mv /dndtools-$DNDTOOLS_VERSION $DNDTOOLS_DIR \
