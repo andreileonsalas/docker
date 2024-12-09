@@ -4,7 +4,7 @@ import random
 import string
 
 # Change this to False if you run it in development
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 # Configuración de la base de datos usando exclusivamente variables de entorno
