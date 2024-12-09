@@ -15,9 +15,9 @@ fi
 
 echo ========================================================
 echo 
-echo Starting dndtools on http://$(get_ip):8000
+echo Starting dndtools on http://$(get_ip):8888
 echo 
 echo ========================================================
 echo 
 python manage.py help
-python manage.py runserver $(get_ip):8000
+python manage.py runserver $(get_ip):8888
